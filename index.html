@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBeats - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="inicial/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="perfil">
+                <a href="perfil.html"><i class="ri-user-fill" style="color: white"></i></a>
+                <span>Perfil</span>
+            </div>
+            <div class="center-icon">
+                <nav class="nav">   
+                    <img id="menu-button" class="menu-button" src="inicial/Images/logo.jpg" width="50px" alt="Icone-menu">
+                    <ul id="menu" class="menu">
+                        <li><a href="player.html"><span><img src="./inicial/Images/playlist.png" width="40px" alt="Playlist-icon"></span></a></li>
+                        <li><a href="registrar-musica.html"><span><img src="./inicial/Images/registro.png" width="40px" alt="Home-icon"></span></a></li>
+                        <li><a href="Historico.html"><span><img src="./inicial/Images/historico.jpg" width="40px" alt="History-icon"></span></a></li>
+                        <li><a href="curtidos.html"><span><img src="./inicial/Images/like.png" width="40px" alt="History-icon"></span></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="settings-icon">
+                <i class="ri-settings-5-fill"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisa">
+        </div>
+
+        <section class="recommendations">
+            <h2>Recomendações</h2>
+            <div class="genres">
+                <div class="genre">Sertanejo</div>
+                <div class="genre">Pop Music</div>
+                <div class="genre">Pagode</div>
+                <div class="genre">Jazz</div>
+                <div class="genre">Country</div>
+            </div>
+        </section>
+
+        <section class="popular-artists">
+            <h2>Artistas Populares</h2>
+            <div class="artists">
+                <div class="artist"><img src="inicial/Images/50cent.jpg" alt="Artista 1"></div>
+                <div class="artist"><img src="inicial/Images/frank.jpg" alt="Artista 2"></div>
+                <div class="artist"><img src="inicial/Images/laufey.jpg" alt="Artista 3"></div>
+                <div class="artist"><img src="inicial/Images/charles.png" alt="Artista 4"></div>
+                <div class="artist"><img src="inicial/Images/tupac.jpg" alt="Artista 5"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Adicione o cenário da noite com estrelas cadentes -->
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        function VeryfyUser(){
+            let usuarioLogado = sessionStorage.getItem(usuarioLogado)
+            if(!usuarioLogado){
+                console.log("usuario não logado")
+                window.location.href = 'index.html'
+            }
+        }
+        window.onload = function(){
+            VeryfyUser()
+        }
+    </script>
+</body>
+</html>

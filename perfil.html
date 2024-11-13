@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link rel="stylesheet" href="perfil/perfil.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="perfil/perfil.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="perfil">
+            <i class="ri-user-fill"></i>
+            <span>Perfil</span>
+        </div>
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="./inicial/Images/logo.jpg" alt="Logo">
+            </a>
+        </div>
+
+        <div class="settings-icon">
+            <i class="ri-settings-5-fill"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Editar Perfil</h1>
+        </div>
+        
+        <form>
+            <div class="profile-pic">
+                <label for="profile-picture">
+                    <div class="perfil">
+                        <i class="ri-user-fill"></i>
+                        <span>Perfil</span>
+                    </div>
+                </label>
+                <input type="file" id="profile-picture" accept="image/*" onchange="loadProfileImage(event)">
+            </div>
+
+            <label for="username">Nome do usuário</label>
+            <input type="text" id="username" placeholder="Seu nome de usuário">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="E-mail do usuário">
+
+            <label for="dob">Data de nascimento</label>
+            <input type="date" id="dob" value="">
+
+            <label for="region">País - Região</label>
+            <input type="text" id="region" placeholder="País - Região do usuário">
+
+            <button type="submit" class="save-button">Salvar</button>
+            <br>
+            <button class="saida" onclick="logout()">Sair</button>
+        </form>
+    </div>
+</body>
+
+
+<script>
+    function logout() {
+    // Recupera a lista de usuários do local storage
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    
+    // Recupera o usuário logado do session storage
+    let usuarioLogado = JSON.parse(sessionStorage.getItem('usuarioLogado'));
+
+    if (usuarioLogado) {
+        // Encontra o usuário correspondente na lista
+        let usuario = usuarios.find(u => u.id === usuarioLogado.id);
+
+        if (usuario) {
+            // Define o login como false
+            usuario.login = false;
+
+            // Atualiza o local storage
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            // Limpa o session storage
+            sessionStorage.removeItem('usuarioLogado');
+
+            console.log('Logout feito com sucesso');
+
+            setTimeout(() => {
+            console.log("redireciona para index.html");
+            window.location.href = '../Entrar.html';
+        }, 50);
+        }
+    }
+
+    // Redireciona para a página de login ou outra página desejada
+    window.location.href = 'Entrar.html';
+}
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Músicas Curtidas</title>
+    <link rel="stylesheet" href="curtidos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="playlists/script.js" defer></script>
+</head>
+<body>
+    <nav class="nav-bar">
+        <header class="header-content">
+            <div class="perfil" aria-label="Perfil">
+                <a href="perfil.html" style="color: white"><i class="ri-user-fill"></i>Perfil</a>
+            </div>
+            <div class="image-text">
+                <a href="player.html" aria-label="Página Inicial">
+                    <img src="player/logo.jpg" alt="Logo do site">
+                </a>
+            </div>
+            <div class="settings-icon" aria-label="Configurações">
+                <i class="ri-settings-5-fill"></i>
+            </div>
+        </header>
+    </nav>
+    <input type="text" id="nomePlaylist" placeholder="Nome para playlist">
+    <button class="create-playlist" onclick="createPlaylist()">Criar Playlist</button>
+
+
+    <li class="listas-playlist">
+        <ul id="playlists-exibition"></ul>
+    </li>
+
+</body>
+</html>

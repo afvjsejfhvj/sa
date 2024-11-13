@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #333; /* Alterado para um fundo cinza escuro */
+    color: white;
+}
+
+.nav-bar {
+    background-color: #3c067a; /* Cor da barra de navegação */
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.perfil, .settings-icon {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white; /* Cor dos ícones */
+}
+
+.perfil i, .settings-icon i {
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.image-text {
+    text-align: center;
+    flex: 1;
+}
+
+.image-text img {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.liked-area {
+    padding: 2rem;
+    text-align: center;
+}
+
+.liked-area h1 {
+    margin-bottom: 1.5rem;
+}
+
+/* Lista de músicas */
+#liked-songs-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#liked-songs-list li {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente */
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+#liked-songs-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#liked-songs-list li button {
+    background-color: #e74c3c; /* Cor do botão de remover */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#liked-songs-list li button:hover {
+    background-color: #c0392b; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #282c34;
+    color: white;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBeats - player-area</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="player/script.js"></script>
+    <link rel="stylesheet" href="player/style.css">
+</head>
+
+<body>
+    <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+    </div>
+    <nav class="nav-bar">
+        <header>
+            <div class="perfil">
+                <i class="ri-user-fill"></i>
+            </div>
+            <div class="image-text">
+                <a href="./index.html">
+                    <img src="player/logo.jpg" alt="inicio">
+                </a>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class="liked-songs">
+                <a href="./curtidos.html">
+                    <i class="ri-heart-fill"></i>
+                </a>
+            </div>
+
+        </header>
+    </nav>
+
+    <main class="player-area">
+        <div class="album-info">
+            <img src="./player/skyfall.jpg" alt="Frank Sinatra">
+            <h2>Skyfall</h2>
+            <p>Adele</p>
+            <div class="controls">
+                <button id="prev"><i class="ri-skip-back-fill"></i></button>
+                <button id="play-pause"><i class="ri-play-fill"></i></button>
+                <button id="next"><i class="ri-skip-forward-fill"></i></button>
+                <button id="like-btn"><i class="ri-heart-line"></i></button>
+
+
+                <div class="dropdown">
+                    <a href="#" class="dropbtn ri-play-list-add-line" ></a>
+                    <div class="dropdown-content" id="playlist-select">
+                        <select id="playlist-select">
+                            <option value="">Selecione uma playlist</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <aside class="playlist">
+            <h3><img src="player/play2.png" width="60px"
+                    style="vertical-align: middle; margin-right: 10px; border-radius: 10px;">Playlist</h3>
+            <ul id="playlist">
+                <li data-src="./player/from.mp3" data-img="./player/lau.png"><img src="./player/lau.png"
+                        width="75px">From the Start - Laufey</li>
+                <li data-src="./player/die_another_day.mp3" data-img="./player/Another_Way_2_Die_007_QoS.jpg"><img
+                        src="./player/Another_Way_2_Die_007_QoS.jpg" width="75px">Die Another Day - Jack White</li>
+                <li data-src="./player/james.mp3" data-img="./player/skyfall.jpg"><img src="./player/skyfall.jpg"
+                        width="75px">Skyfall - Adele</li>
+                <li data-src="./player/mr_lonely.mp3" data-img="./player/mr.png"><img src="./player/mr.png"
+                        width="75px">Mr Lonely - Bobby Vinton</li>
+                <li data-src="./player/monaco.mp3" data-img="./player/monaco.jpg"><img src="./player/monaco.jpg"
+                        width="75px">Bad Bunny - Monaco</li>
+            </ul>
+        </aside>
+    </main>
+
+    <audio id="audio" controls style="display:none;">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+</body>
+
+</html>

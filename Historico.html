@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico de Músicas</title>
+    <link rel="stylesheet" href="./Historico/historico.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="profile">
+            <a href="perfil.html">
+                <i class="ri-user-fill" style="color: white"></i>
+                <span style="color: white">Perfil</span>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./inicial/Images/logo.jpg" alt="Logo">
+            </a>
+        </div>
+        <div class="settings">
+            <a href="">
+                <i class="ri-settings-5-fill"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Historico</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Álbum</th>
+                    <th>Escutado em</th>
+                    <th>Duração</th>
+                </tr>
+            </thead>
+            <tbody id="music-list">
+                <tr>
+                    <td class="song-info">
+                        <img src="./player/lau.png" alt="Laufey"> 
+                        <span>From the start</span>
+                    </td>
+                    <td>Bewitched</td>
+                    <td>Há 7 dias</td>
+                    <td>2:49</td>
+                </tr>
+                <tr>
+                    <td class="song-info">
+                        <img src="./player/skyfall.jpg" alt="Adele">
+                        <span>Skyfall</span>
+                    </td>
+                    <td>Skyfall</td>
+                    <td>Há 7 dias</td>
+                    <td>4:46</td>
+                </tr>
+                <tr>
+                    <td class="song-info">
+                        <img src="./player/mr.png" alt="Frank Sinatra">
+                        <span>Fly Me to the Moon</span>
+                    </td>
+                    <td>Cotunt Basie</td>
+                    <td>Há 7 dias</td>
+                    <td>2:27</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./Historico/historico.js"></script>
+</body>
+</html>

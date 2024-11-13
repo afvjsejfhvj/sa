@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url(../inicial/Images/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 0;
+}
+
+.header {
+    background-color: #3c067a;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.profile img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+}
+
+.settings i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr {
+    background-color: #2c2c2c;
+    transition: background-color 0.2s;
+}
+
+tbody tr:hover {
+    background-color: #3d3d3d;
+}
+
+td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+table th {
+    color: #888;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 1rem;
+}
